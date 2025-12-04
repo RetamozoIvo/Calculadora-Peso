@@ -12,6 +12,7 @@ function calcularIMC() {
     let foto1 = document.getElementById("imagen1");
     let foto2 = document.getElementById("imagen2");
     let audioMal = document.getElementById("sonidoMal");
+
     // 3. Lógica SIMPLIFICADA (Solo SI y SINO)
     // Usamos 18.5 como límite. Si es menor, es "flaca". Si no, es lo demás.
     if (imc < 18.5) {
@@ -43,6 +44,4 @@ function calcularIMC() {
     foto2.removeAttribute("hidden");
     foto1.className = "girando";
     foto2.className = "girando";
-
 }
-
