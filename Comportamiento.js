@@ -22,6 +22,7 @@ function calcularIMC() {
         // Mostramos las 2 imágenes de flaca (repetí el pingüino como ejemplo)
         foto1.src = "ardilla.jpg";
         foto2.src = "esqueleto.jpg"; 
+        audioMal.play();
 
     } else {
         // --- CASO SINO (Cualquier otra cosa) ---
@@ -31,6 +32,7 @@ function calcularIMC() {
         // Mostramos las otras 2 imágenes
         foto1.src = "antigordas.jpg";
         foto2.src = "telekinogordo.jpg";
+        audioMal.play();
     }
 
     // 4. Mostrar resultados
@@ -41,4 +43,5 @@ function calcularIMC() {
     foto2.removeAttribute("hidden");
     foto1.className = "girando";
     foto2.className = "girando";
+
 }
