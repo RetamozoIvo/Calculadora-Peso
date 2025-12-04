@@ -1,0 +1,84 @@
+body {
+    /* TRUCO PRO: Capa negra al 70% (0.7) sobre la imagen para que se lea el texto */
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fondo.jpg');
+    
+    /* Ajustes para que la imagen cubra toda la pantalla y no se repita */
+    background-size: cover;       /* Cubre todo el espacio */
+    background-position: center;  /* Centra la imagen */
+    background-attachment: fixed; /* La imagen queda quieta si scrolleas */
+    background-repeat: no-repeat;
+    
+    /* Lo que ya tenías antes */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;          /* Sacamos márgenes para que ocupe todo */
+    padding-top: 50px;  /* Usamos padding en vez de margin para el aire de arriba */
+    height: 100vh;      /* Asegura que el fondo llegue hasta abajo de todo */
+}
+button {
+    background-color: #007bff; /* Azul profesional */
+    color: white; /* Letra blanca */
+    padding: 10px 20px; /* Relleno: lo hace más gordito */
+    border: none; /* Le sacamos el borde feo */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Que aparezca la manito al pasar el mouse */
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Esto pasa cuando le pasás el mouse por encima */
+button:hover {
+    background-color: #0056b3; /* Se oscurece un poquito */
+}
+input {
+    padding: 10px; /* Espacio adentro para que no se vea apretado */
+    border: 1px solid #ccc; /* Un borde gris suave */
+    border-radius: 5px; /* Puntas redondeadas */
+    width: 200px; /* Que no sean tan anchas */
+    margin: 10px; /* Separarlas un poco entre ellas */
+    font-size: 16px;
+}
+
+/* Y de paso, pongamos lindo el texto del resultado */
+#resultadoTexto {
+    background-color: white;  /* Fondo blanco */
+    color: black;             /* Letra negra */
+    padding: 15px;            /* Espacio adentro */
+    border-radius: 10px;      /* Bordes redondos */
+    display: inline-block;    /* La caja se ajusta al tamaño del texto */
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: 2px solid white;  /* Un borde para que quede prolijo */
+}
+/* Clase para cuando está saludable */
+.saludable {
+    color: #dc3545; /* Un verde lindo */
+    border: 2px solid #dc3545; /* Un borde verde */
+    padding: 10px;
+    background-color: #d4edda; /* Fondo verdecito suave */
+    border-radius: 10px;
+}
+
+/* Clase para alerta (bajo peso o sobrepeso) */
+.alerta {  /*esta alerta es como un diseño de colorr para la respuesta, debajo del sino de peso va esto*/
+    color: #dc3545; /* Rojo fuerte */
+    border: 2px solid #dc3545;
+    padding: 10px;
+    background-color: #f8d7da; /* Fondo rojizo suave */
+    border-radius: 10px;
+}
+ /*esta alerta es como un diseño de colorr para la respuesta, debajo del sino de peso va esto*/
+ @keyframes rotar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Creamos la clase que activa ese movimiento */
+.girando {
+    animation: rotar 2s linear infinite; /* Gira por siempre, cada 2 segundos */
+    border-radius: 50%; /* Hacemos que la imagen se vea redonda */
+    border: 4px solid #ffffff; /* Un borde blanco fachero */
+    box-shadow: 0 0 15px rgba(255,255,255,0.5); /* Un "brillo" alrededor */
+}
